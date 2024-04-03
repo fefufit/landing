@@ -10,7 +10,8 @@ export const strings = {
       second: 'to engage in sports'
     },
     button: {
-      download: 'Download Android app',
+      downloadRuStore: 'Download from RuStore',
+      directDownload: 'Download APK',
       useWeb: 'Use web version'
     }
   },
@@ -25,7 +26,8 @@ export const strings = {
       second: 'заняться спортом'
     },
     button: {
-      download: 'Скачать Android-приложение',
+      downloadRuStore: 'Скачать из RuStore',
+      directDownload: 'Скачать APK',
       useWeb: 'Использовать веб-версию'
     }
   }
