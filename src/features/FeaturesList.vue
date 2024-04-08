@@ -17,7 +17,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="features-list" ref="featuresListRef">
+  <div class="features-list mx-10" ref="featuresListRef">
     <p class="base-font feature">{{ $t('feature.info') }}</p>
 
     <p class="base-font feature">{{ $t('feature.booking') }}</p>
