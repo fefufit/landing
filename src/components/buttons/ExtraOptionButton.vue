@@ -41,8 +41,8 @@ const props: ExtraOptionButtonProps = defineProps<ExtraOptionButtonProps>()
       leave-to-class="transform opacity-0 scale-95"
     >
       <MenuItems class="absolute right-0 z-10 w-full origin-top-cente rounded-md">
-        <div class="pr-10 pt-1" v-for="option in props.options">
-          <MenuItem v-slot="{ active }">
+        <div class="pr-10 pt-1" v-for="option in props.options" :key="option">
+          <MenuItem>
             <HoverButton :title="option" class="block" />
           </MenuItem>
         </div>

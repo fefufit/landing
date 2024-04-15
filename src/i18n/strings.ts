@@ -11,7 +11,7 @@ export const strings = {
     },
     button: {
       downloadRuStore: 'Download from RuStore',
-      directDownload: 'Download APK',
+      directDownload: 'Download for Android',
       useWeb: 'Use web version'
     }
   },
@@ -27,7 +27,7 @@ export const strings = {
     },
     button: {
       downloadRuStore: 'Скачать из RuStore',
-      directDownload: 'Скачать APK',
+      directDownload: 'Скачать для Android',
       useWeb: 'Использовать веб-версию'
     }
   }

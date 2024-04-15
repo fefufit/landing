@@ -7,11 +7,5 @@ const props: ImageViewerProps = defineProps<ImageViewerProps>()
 </script>
 
 <template>
-  <div class="h-full">
-    <img
-      :src="props.src"
-      class="h-full object-cover transition-all duration-500 hover:scale-110 rounded-md"
-    />
-  </div>
+  <img :src="props.src" class="object-contain rounded-3xl" />
 </template>
-@click="openImage"

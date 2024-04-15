@@ -1,14 +1,15 @@
 <script setup lang="ts">
 interface SecondaryButtonProps {
   title: string
+  onClick: () => void
 }
 
 const props: SecondaryButtonProps = defineProps<SecondaryButtonProps>()
 </script>
 
 <template>
-  <button class="shape-size base-color border animation base-font">
-    <span class="relative z-10"> {{ props.title }}</span>
+  <button class="shape-size base-color border animation base-font" @click="props.onClick">
+    {{ props.title }}
   </button>
 </template>
 
@@ -27,8 +28,6 @@ const props: SecondaryButtonProps = defineProps<SecondaryButtonProps>()
 }
 
 .animation {
-  @apply transition-all before:absolute before:h-0 before:w-0 before:rounded-full;
-  @apply before:bg-[--main-white-color] before:duration-500 before:ease-out hover:before:h-screen;
-  @apply hover:before:w-screen hover:text-[--main-background-color] hover:shadow-2xl;
+  @apply transition-all before:duration-500 hover:bg-[--main-white-color]  hover:text-[--main-background-color];
 }
 </style>

@@ -1,7 +1,19 @@
 <script lang="ts" setup>
-import ExtraOptionButton from '@/components/buttons/ExtraOptionButton.vue'
+import PrimaryButton from '@/components/buttons/PrimaryButton.vue'
 import SecondaryButton from '@/components/buttons/SecondaryButton.vue'
-import Logo from '@/components/Logo.vue'
+import Logo from '@/components/icons/AppLogo.vue'
+
+const directDownloadUrl: string = import.meta.env.VITE_DIRECT_DOWNLOAD_APP_URL
+const downloadRuStoreUrl: string = import.meta.env.VITE_DOWNLOAD_APP_URL
+const openWebUrl: string = import.meta.env.VITE_WEB_APP_URL
+
+function directDownload() {
+  window.open(directDownloadUrl, '_self')
+}
+
+function openWebApp() {
+  window.open(openWebUrl, '_self')
+}
 </script>
 
 <template>
@@ -11,12 +23,13 @@ import Logo from '@/components/Logo.vue'
 
     <Logo class="p-10 h-[30%]" />
 
-    <ExtraOptionButton
-      :title="$t('button.downloadRuStore')"
-      :options="[$t('button.directDownload')]"
-    />
-    <div class="m-6"></div>
-    <SecondaryButton :title="$t('button.useWeb')" />
+    <PrimaryButton :title="$t('button.directDownload')" :onClick="directDownload" />
+    <div class="m-1"></div>
+    <SecondaryButton :title="$t('button.useWeb')" :onClick="openWebApp" />
+    <div class="m-1"></div>
+    <a class="text-[--main-white-color]" :href="downloadRuStoreUrl">
+      {{ $t('button.downloadRuStore') }}
+    </a>
   </div>
 </template>
 

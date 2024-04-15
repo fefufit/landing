@@ -8,7 +8,7 @@ const props: HoverButtonProps = defineProps<HoverButtonProps>()
 
 <template>
   <div class="w-full">
-    <button type="button" class="row shape-size base-color border animation base-font">
+    <button type="button" class="row shape-size base-color border base-font">
       <div class="px-4 py-2 w-full text-center hover:bg-gray-200">
         {{ props.title }}
       </div>

@@ -1,13 +1,14 @@
 <script setup lang="ts">
 interface PrimaryButtonProps {
   title: string
+  onClick: () => void
 }
 
 const props: PrimaryButtonProps = defineProps<PrimaryButtonProps>()
 </script>
 
 <template>
-  <button class="shape-size base-color border animation base-font">
+  <button class="shape-size base-color border animation base-font" @click="props.onClick">
     {{ props.title }}
   </button>
 </template>
