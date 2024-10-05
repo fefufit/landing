@@ -4,9 +4,9 @@ import { onMounted, onUnmounted, reactive, ref } from 'vue'
 const featuresListRef = ref()
 
 const features = reactive([
-  { text: 'feature.info' },
-  { text: 'feature.booking' },
-  { text: 'feature.purchase' }
+  { text: 'adminFeature.info' },
+  { text: 'adminFeature.booking' },
+  { text: 'adminFeature.purchase' }
 ])
 
 onMounted(() => {

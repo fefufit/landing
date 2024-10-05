@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import DownloadButtons from '@/features/DownloadButtons.vue'
-import FeaturesList from '@/features/FeaturesList.vue'
+import AdminDownloadButtons from '@/features/admin/AdminDownloadButtons.vue'
+import AdminFeaturesList from '@/features/admin/AdminFeaturesList.vue'
 import ImageList from '@/features/ImageList.vue'
 
 const publicPath: string = import.meta.env.VITE_BASE_URL
@@ -19,8 +19,8 @@ let appMocks = [
       class="bg-[--main-admin-color] w-screen flex items-center justify-evenly"
       style="height: 100dvh"
     >
-      <FeaturesList class="features-list" />
-      <DownloadButtons />
+      <AdminFeaturesList class="features-list" />
+      <AdminDownloadButtons />
       <div class="flex flex-row" style="height: 100dvh">
         <ImageList
           :app-mocks="appMocks.slice(0, 2)"

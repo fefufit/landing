@@ -11,9 +11,22 @@ function directDownload() {
   window.open(directDownloadUrl, '_self')
 }
 
+function downloadIos() {
+  window.open("https://apps.apple.com/app/fefufit/id6503181216", '_self')
+}
+
 function openWebApp() {
   window.open(openWebUrl, '_self')
 }
+
+function isIOS() {
+  if(/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+     return true
+   } else {
+     return false
+   }
+}
+
 </script>
 
 <template>
@@ -23,8 +36,11 @@ function openWebApp() {
 
     <Logo class="p-10 h-[30%]" />
 
-    <PrimaryButton :title="$t('button.directDownload')" :onClick="directDownload" />
-    <div class="m-1"></div>
+    <PrimaryButton :title="$t('button.directDownload')" :onClick="directDownload"  v-if="!isIOS()"/>
+    <div class="m-1" v-if="!isIOS()"></div>
+    
+    <PrimaryButton :title="$t('button.downloadForiPhone')" :onClick="downloadIos" v-if="isIOS()" />
+    <div class="m-1" v-if="isIOS()"></div>
     <SecondaryButton :title="$t('button.useWeb')" :onClick="openWebApp" />
     <div class="m-1"></div>
     <a class="text-[--main-white-color]" :href="downloadRuStoreUrl">
