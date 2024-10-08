@@ -8,7 +8,7 @@ const props: PrimaryButtonProps = defineProps<PrimaryButtonProps>()
 </script>
 
 <template>
-  <button class="shape-size base-color border animation base-font" @click="props.onClick">
+  <button class="shape-size base-color border base-font" @click="props.onClick">
     {{ props.title }}
   </button>
 </template>

@@ -11,8 +11,12 @@ function directDownload() {
   window.open(directDownloadUrl, '_self')
 }
 
+function downloadRuStore() {
+  window.open(downloadRuStoreUrl, '_self')
+}
+
 function downloadIos() {
-  window.open("https://apps.apple.com/app/fefufit/id6503181216", '_self')
+  window.open('https://apps.apple.com/app/fefufit/id6503181216', '_self')
 }
 
 function openWebApp() {
@@ -20,32 +24,35 @@ function openWebApp() {
 }
 
 function isIOS() {
-  if(/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
-     return true
-   } else {
-     return false
-   }
+  if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+    return true
+  } else {
+    return false
+  }
 }
-
 </script>
 
 <template>
-  <div class="flex flex-col items-center justify-center mx-4">
-    <div class="base-font title-text text-[51px]">{{ $t('title.first') }}</div>
-    <div class="base-font title-text text-[37px]">{{ $t('title.second') }}</div>
+  <div class="bg-[--main-background-color]">
+    <div class="p-4 flex flex-col items-center justify-center">
+      <div class="base-font title-text text-[51px]">{{ $t('title.first') }}</div>
+      <div class="base-font title-text text-[37px]">{{ $t('title.second') }}</div>
 
-    <Logo class="p-10 h-[30%]" />
+      <Logo class="p-10 h-[30%]" />
 
-    <PrimaryButton :title="$t('button.directDownload')" :onClick="directDownload"  v-if="!isIOS()"/>
-    <div class="m-1" v-if="!isIOS()"></div>
-    
-    <PrimaryButton :title="$t('button.downloadForiPhone')" :onClick="downloadIos" v-if="isIOS()" />
-    <div class="m-1" v-if="isIOS()"></div>
-    <SecondaryButton :title="$t('button.useWeb')" :onClick="openWebApp" />
-    <div class="m-1"></div>
-    <a class="text-[--main-white-color]" :href="downloadRuStoreUrl">
-      {{ $t('button.downloadRuStore') }}
-    </a>
+      <PrimaryButton :title="$t('button.directDownload')" :onClick="downloadRuStore" />
+
+      <div class="m-2"></div>
+
+      <PrimaryButton :title="$t('button.downloadForiPhone')" :onClick="downloadIos" />
+
+      <div class="m-2"></div>
+
+      <a class="text-[--main-white-color]" :href="openWebUrl">
+        {{ $t('button.useWeb') }}
+      </a>
+      <div class="m-1"></div>
+    </div>
   </div>
 </template>
 
