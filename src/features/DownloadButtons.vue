@@ -61,11 +61,13 @@ function isIOS() {
   @apply text-center text-[--main-white-color] font-light;
 }
 
-.scroll {
-  @apply overflow-y-auto;
-}
+@media screen and (max-height: 730px) {
+  .scroll {
+    @apply overflow-y-auto  h-full;
+  }
 
-.scroll::-webkit-scrollbar {
-  display: none;
+  .scroll::-webkit-scrollbar {
+    display: none;
+  }
 }
 </style>

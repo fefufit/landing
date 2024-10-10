@@ -33,6 +33,10 @@ onMounted(() => {
     clearInterval(intervalId)
   })
 })
+
+function preventScroll(event: any) {
+  event.preventDefault()
+}
 </script>
 
 <template>
