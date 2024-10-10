@@ -33,7 +33,7 @@ function isIOS() {
 </script>
 
 <template>
-  <div class="bg-[--main-background-color]">
+  <div class="bg-[--main-background-color] scroll">
     <div class="p-4 flex flex-col items-center justify-center">
       <div class="base-font title-text text-[51px]">{{ $t('title.first') }}</div>
       <div class="base-font title-text text-[37px]">{{ $t('title.second') }}</div>
@@ -59,5 +59,13 @@ function isIOS() {
 <style scoped>
 .title-text {
   @apply text-center text-[--main-white-color] font-light;
+}
+
+.scroll {
+  @apply overflow-y-auto;
+}
+
+.scroll::-webkit-scrollbar {
+  display: none;
 }
 </style>
