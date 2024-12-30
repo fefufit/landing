@@ -1,14 +1,16 @@
 <script lang="ts" setup>
 import PrimaryButton from '@/components/buttons/PrimaryButton.vue'
 import SecondaryButton from '@/components/buttons/SecondaryButton.vue'
+import AndroidButton from '@/components/buttons/AndroidButton.vue'
+import ExtraOptionButton from '@/components/buttons/ExtraOptionButton.vue'
 import Logo from '@/components/icons/AppLogo.vue'
 
-const directDownloadUrl: string = import.meta.env.VITE_DIRECT_DOWNLOAD_APP_URL
+const downloadForAndroidUrl: string = import.meta.env.VITE_DIRECT_DOWNLOAD_APP_URL
 const downloadRuStoreUrl: string = import.meta.env.VITE_DOWNLOAD_APP_URL
 const openWebUrl: string = import.meta.env.VITE_WEB_APP_URL
 
-function directDownload() {
-  window.open(directDownloadUrl, '_self')
+function downloadForAndroid() {
+  window.open(downloadForAndroidUrl, '_self')
 }
 
 function downloadRuStore() {
@@ -40,11 +42,24 @@ function isIOS() {
 
       <Logo class="p-10 h-[30%]" />
 
-      <PrimaryButton :title="$t('button.directDownload')" :onClick="downloadRuStore" />
+      <!-- <PrimaryButton :title="$t('button.downloadForAndroid')" :onClick="downloadRuStore" /> -->
+
+      <AndroidButton
+        :title="$t('button.downloadRuStore')"
+        :onClick="downloadRuStore"
+        :extra-title="$t('button.apk')"
+        :extra-on-click="downloadForAndroid"
+        class="h-12"
+      />
+
+      <!-- <ExtraOptionButton
+        :title="$t('button.downloadForAndroid')"
+        :options="[$t('button.directDownload')]"
+      /> -->
 
       <div class="m-2"></div>
 
-      <PrimaryButton :title="$t('button.downloadForiPhone')" :onClick="downloadIos" />
+      <PrimaryButton :title="$t('button.downloadForIPhone')" :onClick="downloadIos" class="h-12" />
 
       <div class="m-2"></div>
 

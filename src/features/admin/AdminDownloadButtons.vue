@@ -1,18 +1,18 @@
 <script lang="ts" setup>
-import PrimaryButton from './PrimaryButton.vue';
-import SecondaryButton from './SecondaryButton.vue';
+import PrimaryButton from './PrimaryButton.vue'
+import SecondaryButton from './SecondaryButton.vue'
 import Logo from '@/components/icons/AppLogo.vue'
 
-const directDownloadUrl: string = import.meta.env.VITE_DIRECT_DOWNLOAD_APP_ADMIN_URL
+const downloadForAndroidUrl: string = import.meta.env.VITE_DIRECT_DOWNLOAD_APP_ADMIN_URL
 const downloadRuStoreUrl: string = import.meta.env.VITE_DOWNLOAD_APP_URL
 const openWebUrl: string = import.meta.env.VITE_WEB_APP_URL
 
-function directDownload() {
-  window.open(directDownloadUrl, '_self')
+function downloadForAndroid() {
+  window.open(downloadForAndroidUrl, '_self')
 }
 
 function openWebApp() {
-  window.open("https://fefufit.ru/admin/app", '_self')
+  window.open('https://fefufit.ru/admin/app', '_self')
 }
 </script>
 
@@ -23,10 +23,9 @@ function openWebApp() {
 
     <Logo class="p-10 h-[30%]" />
 
-    <PrimaryButton :title="$t('button.directDownload')" :onClick="directDownload" />
+    <PrimaryButton :title="$t('button.downloadForAndroid')" :onClick="downloadForAndroid" />
     <div class="m-1"></div>
     <SecondaryButton :title="$t('button.useWeb')" :onClick="openWebApp" />
-    
   </div>
 </template>
 

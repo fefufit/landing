@@ -1,7 +1,7 @@
 export const strings = {
   en: {
-    adminFeature: { 
-      info:  'information about visitors and their workouts',
+    adminFeature: {
+      info: 'information about visitors and their workouts',
       booking: 'cancellation and rescheduling of workouts',
       purchase: 'purchase subscriptions'
     },
@@ -16,13 +16,15 @@ export const strings = {
     },
     button: {
       downloadRuStore: 'Download from RuStore',
-      directDownload: 'Download for Android',
+      downloadForAndroid: 'Download for Android',
+      directDownload: 'Download APK',
       useWeb: 'Use web version',
-      downloadForiPhone: 'Download for iPhone'
+      apk: 'APK',
+      downloadForIPhone: 'Download for iPhone'
     }
   },
   ru: {
-    adminFeature: { 
+    adminFeature: {
       info: 'информация о поситителях и их занятиях',
       booking: 'отмена и перенос занятий',
       purchase: 'покупка абонементов'
@@ -38,9 +40,11 @@ export const strings = {
     },
     button: {
       downloadRuStore: 'Скачать из RuStore',
-      directDownload: 'Скачать для Android',
+      downloadForAndroid: 'Скачать для Android',
+      directDownload: 'Скачать APK',
+      apk: 'APK',
       useWeb: 'Использовать веб-версию',
-      downloadForiPhone: 'Скачать для iPhone'
+      downloadForIPhone: 'Скачать для iPhone'
     }
   }
 }
