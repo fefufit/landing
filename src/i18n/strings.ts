@@ -20,7 +20,9 @@ export const strings = {
       directDownload: 'Download APK',
       useWeb: 'Use web version',
       apk: 'APK',
-      downloadForIPhone: 'Download for iPhone'
+      downloadForIPhone: 'Download for iPhone',
+      offerOfAgreement: 'offer of agreement',
+      personalDataAgreement: 'personal data agreement'
     }
   },
   ru: {
@@ -44,7 +46,9 @@ export const strings = {
       directDownload: 'Скачать APK',
       apk: 'APK',
       useWeb: 'Использовать веб-версию',
-      downloadForIPhone: 'Скачать для iPhone'
+      downloadForIPhone: 'Скачать для iPhone',
+      offerOfAgreement: 'договор оферты',
+      personalDataAgreement: 'соглашение о персональных данных'
     }
   }
 }

@@ -35,38 +35,58 @@ function isIOS() {
 </script>
 
 <template>
-  <div class="bg-[--main-background-color] scroll">
-    <div class="p-4 flex flex-col items-center justify-center">
-      <div class="base-font title-text text-[51px]">{{ $t('title.first') }}</div>
-      <div class="base-font title-text text-[37px]">{{ $t('title.second') }}</div>
+  <div class="flex flex-col bg-[--main-background-color] h-full items-center">
+    <div class="grow bg-[--main-background-color] content-center scroll">
+      <div class="p-4 flex flex-col items-center justify-center">
+        <div class="base-font title-text text-[51px]">{{ $t('title.first') }}</div>
+        <div class="base-font title-text text-[37px]">{{ $t('title.second') }}</div>
 
-      <Logo class="p-10 h-[30%]" />
+        <Logo class="p-10 h-[30%]" />
 
-      <!-- <PrimaryButton :title="$t('button.downloadForAndroid')" :onClick="downloadRuStore" /> -->
+        <!-- <PrimaryButton :title="$t('button.downloadForAndroid')" :onClick="downloadRuStore" /> -->
 
-      <AndroidButton
-        :title="$t('button.downloadRuStore')"
-        :onClick="downloadRuStore"
-        :extra-title="$t('button.apk')"
-        :extra-on-click="downloadForAndroid"
-        class="h-12"
-      />
+        <AndroidButton
+          :title="$t('button.downloadRuStore')"
+          :onClick="downloadRuStore"
+          :extra-title="$t('button.apk')"
+          :extra-on-click="downloadForAndroid"
+          class="h-12"
+        />
 
-      <!-- <ExtraOptionButton
+        <!-- <ExtraOptionButton
         :title="$t('button.downloadForAndroid')"
         :options="[$t('button.directDownload')]"
       /> -->
 
-      <div class="m-2"></div>
+        <div class="m-2"></div>
 
-      <PrimaryButton :title="$t('button.downloadForIPhone')" :onClick="downloadIos" class="h-12" />
+        <PrimaryButton
+          :title="$t('button.downloadForIPhone')"
+          :onClick="downloadIos"
+          class="h-12"
+        />
 
-      <div class="m-2"></div>
+        <div class="m-2"></div>
 
-      <a class="text-[--main-white-color]" :href="openWebUrl">
-        {{ $t('button.useWeb') }}
+        <a class="text-[--main-white-color]" :href="openWebUrl">
+          {{ $t('button.useWeb') }}
+        </a>
+        <div class="m-1"></div>
+      </div>
+    </div>
+    <div class="p-4 flex flex-col items-center justify-end">
+      <a
+        class="text-[--main-white-color] text-[20px] font-light no-underline hover:underline"
+        href="https://fefufit.ru/pp/oa.pdf"
+      >
+        {{ $t('button.offerOfAgreement') }}
       </a>
-      <div class="m-1"></div>
+      <a
+        class="text-[--main-white-color] text-[20px] font-light no-underline hover:underline"
+        href="https://fefufit.ru/pp/pd.pdf"
+      >
+        {{ $t('button.personalDataAgreement') }}
+      </a>
     </div>
   </div>
 </template>
